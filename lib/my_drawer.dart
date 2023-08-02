@@ -117,23 +117,28 @@ class My_Drawer extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(),
+            SizedBox(
+              height: 200,
+            ),
             Divider(
               height: 1,
               thickness: 1,
               color: Colors.black12,
             ),
 
-            TextButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.square_rounded,
-                  color: Color.fromARGB(255, 193, 148, 12)),
-              label: const Text(
-                "Premium'u ücretsiz \ndeneyin",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.black),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.square_rounded,
+                    color: Color.fromARGB(255, 193, 148, 12)),
+                label: const Text(
+                  "Premium'u ücretsiz \ndeneyin",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black),
+                ),
               ),
             ),
             Column(
