@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linkedln_clone_nav_drawer/my_appbar.dart';
 import 'package:linkedln_clone_nav_drawer/my_drawer.dart';
 import 'package:linkedln_clone_nav_drawer/navbar.dart';
 
@@ -67,7 +68,7 @@ class _HomeState extends State<Home> {
       body: Center(
         child: Text("İçerik Akış "),
       ),
-      // bottomNavigationBar: const Navbar(),
+      bottomNavigationBar: const My_Navbar(),
     );
   }
 }
