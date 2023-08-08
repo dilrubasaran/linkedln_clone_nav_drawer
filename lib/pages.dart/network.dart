@@ -1,6 +1,4 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class Network extends StatefulWidget {
   const Network({super.key});
@@ -12,6 +10,6 @@ class Network extends StatefulWidget {
 class _NetworkState extends State<Network> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Network page"));
+    return const Center(child: Text("Network page"));
   }
 }

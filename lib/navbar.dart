@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linkedln_clone_nav_drawer/my_drawer.dart';
-import 'package:linkedln_clone_nav_drawer/pages.dart/network.dart';
 
-import 'home.dart';
-
+// ignore: camel_case_types
 class My_Navbar extends StatefulWidget {
+  // ignore: use_key_in_widget_constructors
   const My_Navbar({Key? key});
 
   @override
   State<My_Navbar> createState() => _My_NavbarState();
 }
 
+// ignore: camel_case_types
 class _My_NavbarState extends State<My_Navbar> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   int _selectedIndex = 0;
@@ -19,23 +19,23 @@ class _My_NavbarState extends State<My_Navbar> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      ' Home',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Network',
+      'Network',
       style: optionStyle,
     ),
     Text(
-      'Index 2: Publish',
+      'Publish',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Notifications',
+      'Notifications',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Work-case',
+      'Work-case',
       style: optionStyle,
     ),
   ];
@@ -65,7 +65,7 @@ class _My_NavbarState extends State<My_Navbar> {
                 style: TextStyle(fontSize: 20, color: Colors.black54),
               ),
               style: TextButton.styleFrom(
-                backgroundColor: Color(0xFFEEF3F7),
+                backgroundColor: const Color(0xFFEEF3F7),
                 padding: const EdgeInsets.fromLTRB(4, 16, 180, 16),
               ),
             ),
@@ -82,7 +82,7 @@ class _My_NavbarState extends State<My_Navbar> {
           ),
           // open drawer with button
           onTap: () => scaffoldKey.currentState?.openDrawer(),
-          //TODO: How to open drawer from the circle avatar
+          //* How to open drawer from the circle avatar
         ),
         actions: [
           Padding(
@@ -94,7 +94,7 @@ class _My_NavbarState extends State<My_Navbar> {
           )
         ],
       ),
-      drawer: My_Drawer(),
+      drawer: const My_Drawer(),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

@@ -8,7 +8,6 @@ class My_Drawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var size = MediaQuery.of(context).size;
     return Drawer(
       child: Padding(
         padding: const EdgeInsets.only(left: 16),
@@ -45,7 +44,7 @@ class My_Drawer extends StatelessWidget {
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: Colors.black45),
-                        //TODO: how to align Text
+                        //* how to align Text
                         textAlign: TextAlign.left,
                       ),
                     ),
@@ -82,9 +81,8 @@ class My_Drawer extends StatelessWidget {
                 ),
               ),
             ),
-            //TODO : out padding
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+            const Padding(
+              padding: EdgeInsets.only(top: 8.0),
               child: Divider(
                 height: 1,
                 thickness: 1,
@@ -117,15 +115,14 @@ class My_Drawer extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 200,
             ),
-            Divider(
+            const Divider(
               height: 1,
               thickness: 1,
               color: Colors.black12,
             ),
-
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: TextButton.icon(

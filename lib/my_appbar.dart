@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 
-// ignore: camel_case_types
-class My_AppBar extends StatefulWidget {
-  const My_AppBar({super.key});
+class Appbar extends StatefulWidget implements PreferredSizeWidget {
+  final Size size;
+  final GlobalKey<ScaffoldState> scaffoldKey;
+  const Appbar({
+    Key? key,
+    required this.size,
+    required this.scaffoldKey,
+  }) : super(key: key);
 
   @override
-  State<My_AppBar> createState() => _My_AppBarState();
+  State<Appbar> createState() => _AppbarState();
+
+  @override
+  Size get preferredSize => size;
 }
 
-// ignore: camel_case_types
-class _My_AppBarState extends State<My_AppBar> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
-
+class _AppbarState extends State<Appbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -29,7 +34,7 @@ class _My_AppBarState extends State<My_AppBar> {
               style: TextStyle(fontSize: 20, color: Colors.black54),
             ),
             style: TextButton.styleFrom(
-              backgroundColor: Color(0xFFEEF3F7),
+              backgroundColor: const Color(0xFFEEF3F7),
               padding: const EdgeInsets.fromLTRB(4, 16, 180, 16),
             ),
           ),
@@ -45,8 +50,8 @@ class _My_AppBarState extends State<My_AppBar> {
           ),
         ),
         // open drawer with button
-        onTap: () => scaffoldKey.currentState?.openDrawer(),
-        //TODO: How to open drawer from the circle avatar
+        onTap: () => widget.scaffoldKey.currentState?.openDrawer(),
+        //* How to open drawer from the circle avatar
       ),
       actions: [
         Padding(
