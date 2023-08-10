@@ -10,6 +10,13 @@ class Network extends StatefulWidget {
 class _NetworkState extends State<Network> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Network page"));
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Ağım",
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+        ),
+      ),
+    );
   }
 }

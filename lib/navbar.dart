@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:linkedln_clone_nav_drawer/my_drawer.dart';
+import 'package:linkedln_clone_nav_drawer/pages/home_page.dart';
+import 'package:linkedln_clone_nav_drawer/pages/network.dart';
+import 'package:linkedln_clone_nav_drawer/pages/notifications.dart';
+import 'package:linkedln_clone_nav_drawer/pages/publish.dart';
+import 'package:linkedln_clone_nav_drawer/pages/work_case.dart';
 
 // ignore: camel_case_types
 class My_Navbar extends StatefulWidget {
@@ -14,31 +19,15 @@ class My_Navbar extends StatefulWidget {
 // ignore: camel_case_types
 class _My_NavbarState extends State<My_Navbar> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      ' Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Network',
-      style: optionStyle,
-    ),
-    Text(
-      'Publish',
-      style: optionStyle,
-    ),
-    Text(
-      'Notifications',
-      style: optionStyle,
-    ),
-    Text(
-      'Work-case',
-      style: optionStyle,
-    ),
+
+  final List<Widget> _pages = [
+    Home_Pages(),
+    Network(),
+    Publish(),
+    Notifications(),
+    Work_Case(),
   ];
+  int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -95,9 +84,7 @@ class _My_NavbarState extends State<My_Navbar> {
         ],
       ),
       drawer: const My_Drawer(),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.red,
         items: [
