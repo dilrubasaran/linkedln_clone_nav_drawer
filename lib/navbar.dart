@@ -21,11 +21,11 @@ class _My_NavbarState extends State<My_Navbar> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   final List<Widget> _pages = [
-    Home_Pages(),
-    Network(),
-    Publish(),
-    Notifications(),
-    Work_Case(),
+    const Home_Pages(),
+    const Network(),
+    const Publish(),
+    const Notifications(),
+    const Work_Case(),
   ];
   int _selectedIndex = 0;
 

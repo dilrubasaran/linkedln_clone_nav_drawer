@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class Home_Pages extends StatefulWidget {
   const Home_Pages({super.key});
 
@@ -7,6 +8,7 @@ class Home_Pages extends StatefulWidget {
   State<Home_Pages> createState() => _Home_PagesState();
 }
 
+// ignore: camel_case_types
 class _Home_PagesState extends State<Home_Pages> {
   @override
   Widget build(BuildContext context) {

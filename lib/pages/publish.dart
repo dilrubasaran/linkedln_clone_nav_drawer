@@ -13,7 +13,7 @@ class _PublishState extends State<Publish> {
     return const Scaffold(
       body: Center(
         child: Text(
-          "Ağım",
+          "Yayınla",
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
         ),
       ),

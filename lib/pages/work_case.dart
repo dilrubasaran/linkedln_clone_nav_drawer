@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
+// ignore: camel_case_types
 class Work_Case extends StatefulWidget {
   const Work_Case({super.key});
 
@@ -8,6 +9,7 @@ class Work_Case extends StatefulWidget {
   State<Work_Case> createState() => _Work_CaseState();
 }
 
+// ignore: camel_case_types
 class _Work_CaseState extends State<Work_Case> {
   final List<String> name = <String>[
     "Tam Zamanlı Başlangıç Seviye",
@@ -27,7 +29,7 @@ class _Work_CaseState extends State<Work_Case> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFEEF3F7),
+        backgroundColor: const Color(0xFFEEF3F7),
         title: Column(
           children: [
             TextButton.icon(
@@ -63,7 +65,7 @@ class _Work_CaseState extends State<Work_Case> {
                     ),
                     label: Text(
                       name[index],
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black45,
                       ),
                     ),
@@ -78,8 +80,8 @@ class _Work_CaseState extends State<Work_Case> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(top: 28.0),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 28.0),
                     child: Text(
                       "Frontend Developer - 2 ",
                       style:
@@ -95,8 +97,8 @@ class _Work_CaseState extends State<Work_Case> {
                           height: 44,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
                         child: Text(
                           "Turing \nTürkiye(Uzaktan)",
                           style: TextStyle(fontSize: 19),
@@ -104,8 +106,8 @@ class _Work_CaseState extends State<Work_Case> {
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8.0),
                     child: Text(
                       "1 gün önce 47 başvuru",
                       style: TextStyle(
@@ -132,7 +134,7 @@ class _Work_CaseState extends State<Work_Case> {
                               ),
                               label: Text(
                                 name[index],
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.black87,
                                 ),
                               ),

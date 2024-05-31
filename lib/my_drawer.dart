@@ -26,9 +26,9 @@ class My_Drawer extends StatelessWidget {
               padding: const EdgeInsets.only(top: 8.0),
               child: TextButton(
                 onPressed: () {},
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       "Dilruba Başaran",
                       style: TextStyle(
@@ -56,9 +56,9 @@ class My_Drawer extends StatelessWidget {
               padding: const EdgeInsets.only(top: 8.0),
               child: TextButton(
                 onPressed: () {},
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       "Analizler ve araçlar",
                       style: TextStyle(
